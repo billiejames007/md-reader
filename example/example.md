@@ -1,4 +1,8 @@
-[[TOC]]
+---
+Author: 'John Doe'
+Category: 'Non-fiction'
+Rating: 7
+---
 
 # h1 Heading 8-)
 
@@ -156,6 +160,16 @@ Classic markup: :wink: :cry: :laughing: :yum:
 
 Shortcuts (emoticons): :-) :-( 8-) ;)
 
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+
+- 19^th^
+- H~2~O
+
+### [Task lists](https://github.com/revin/markdown-it-task-lists)
+
+- [ ] Todo 1
+- [x] Todo 2
+
 ### [KaTeX](https://github.com/waylonflinn/markdown-it-katex)
 
 $\sqrt{3x-1}+(1+x)^2$
@@ -231,34 +245,33 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 ```
 
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+```mermaid
+gantt
+    title My Product Roadmap
+    dateFormat  YYYY-MM-DD
+    section Cool Feature
+    A task           :a1, 2022-02-25, 30d
+    Another task     :after a1, 20d
+    section Rad Feature
+    Task in sequence :2022-03-04, 12d
+    Task, No. 2      :24d
+```
 
-- 19^th^
-- H~2~O
-
-### [Inserted](https://github.com/markdown-it/markdown-it-ins)
+### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
 
 ++Inserted text++
 
-### [Mark](https://github.com/markdown-it/markdown-it-mark)
+### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
 
 ==Marked text==
 
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
+### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
 
-Footnote 1 link[^first].
+This is HTML abbreviation example.
 
-Footnote 2 link[^second].
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
+\*[HTML]: Hyper Text Markup Language
 
 ### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
 
@@ -284,20 +297,53 @@ Term 2
 ~ Definition 2a
 ~ Definition 2b
 
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
 
-This is HTML abbreviation example.
+Footnote 1 link[^first].
 
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+Footnote 2 link[^second].
 
-\*[HTML]: Hyper Text Markup Language
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
 
 ### [Custom containers](https://github.com/markdown-it/markdown-it-container)
 
-::: warning
-_Here be dragons._
+::: danger
+_Here be dragons!_
 :::
 
-::: tips
-_Dragon is dangerous._
+::: warning
+**Here be death.**
 :::
+
+::: success
+_Here be madness._
+:::
+
+::: tip
+**Here be the end of the world.**
+:::
+
+### Alert
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
