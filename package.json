@@ -85,7 +85,7 @@
     "svelte": "^3.50.0"
   },
   "lint-staged": {
-    "**/*": "npm run lint"
+    "**/*": "pnpm run lint"
   },
   "engines": {
     "node": ">=16.0.0"
